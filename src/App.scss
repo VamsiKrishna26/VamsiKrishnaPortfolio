@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Comforter&family=Dongle:wght@300&family=Inconsolata:wght@300&family=Josefin+Sans:ital,wght@1,300&family=Nunito+Sans:wght@300&family=Nunito:wght@300&family=Raleway:wght@200&family=Roboto:wght@300&family=Source+Sans+Pro:wght@300&display=swap");
+//#800020
+
+$Maroon: #800020;
+
+.heading1 {
+    font-family: "Raleway", sans-serif;
+    font-size: 60px;
+    color: rgb(5, 56, 107);
+}
+
+.heading2 {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 45px;
+    color: #CC0033;
+}
+
+.heading3 {
+    font-family: "Dongle", sans-serif;
+    font-size: 40px;
+    color: rgb(85, 122, 149);
+}
+
+.sub-text {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 24px;
+    color: rgb(58, 13, 18);
+}
+
+.image-text {
+    font-family: "Inconsolata", monospace;
+    font-size: 24px;
+    color: rgb(6, 102, 43);
+}
+
+.para-text {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    color: black;
+}
+
+.logos-app {
+    z-index: 10;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    bottom: 25px;
+    right: 25px;
+
+    .logo-app {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        margin: 0.4em;
+        background-color: white;
+        border-radius: 10px;
+        
+    }
+
+    .email{
+        padding: 1px;
+    }
+
+    .logo-app:hover {
+        animation-name: spin;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg) scale(1.5);
+        }
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .heading1 {
+        font-size: 40px;
+    }
+
+    .heading2 {
+        font-size: 34px;
+    }
+
+    .heading3 {
+        font-size: 45px;
+    }
+
+    .sub-text {
+        font-size: 22px;
+    }
+
+    .image-text {
+        font-size: 21px;
+    }
+
+    .para-text {
+        font-size: 18px;
+    }
+
+    .logos-app {
+        bottom: 10px;
+        right: 10px;
+
+        .logo-app {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
