@@ -56,7 +56,7 @@ const App = (props) => {
   }
 
   useEffect(() => {
-    if (scrollToValue === " ") {
+    if (scrollToValue === "") {
       return
     }
     else if (scrollToValue === "Experience") {
@@ -77,7 +77,7 @@ const App = (props) => {
     else if (scrollToValue === "Skills") {
       scrollTo(skills_ref)
     }
-    else {
+    else if(scrollToValue==="Main"){
       scrollTo(main_ref)
     }
   }, [scrollToValue, about_ref, education_ref, experience_ref, project_ref, main_ref, contact_ref, skills_ref])
