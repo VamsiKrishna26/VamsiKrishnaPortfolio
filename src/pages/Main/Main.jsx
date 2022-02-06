@@ -8,7 +8,7 @@ import Email from "../../assets/email.svg";
 import Resume from "../../assets/resume.svg";
 import useOnScreen from "../../useOnScreen";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
-import Animoji from "../../assets/Animoji.gif";
+import Animoji from "../../assets/Animoji.png";
 import CV from "../../assets/VamsiKrishnaPalaparti_CV.pdf";
 const Main = (props) => {
 

@@ -36,7 +36,10 @@ const Experience = () => {
             {/* <AiFillCaretLeft onClick={()=>{if(cardIndex===-1){setCardIndex(false);}else{setCardIndex(!cardIndex)}}}/>
             <AiFillCaretRight onClick={()=>{if(cardIndex===-1){setCardIndex(false);}else{setCardIndex(!cardIndex)}}}/> */}
             <Fade bottom>
-                <CardDetails detailsList={list1} />
+                <div className="card-details">
+                    <CardDetails detailsList={list1} />
+                </div>
+                
             </Fade>
             <Fade bottom>
                 <p className='sub-text'>I am currently employed (October 2020 - Present) as a Customer Assistant (Part-Time) in the Men's Fashion Department at Marks and Spencer (M&S) .</p>

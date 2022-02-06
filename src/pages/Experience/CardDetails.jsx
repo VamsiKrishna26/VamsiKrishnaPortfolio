@@ -76,7 +76,7 @@ const CardDetails = (props) => {
                             <div className="card-details-mobile">
                                 <p className="heading2">{detailsList[1]}</p>
                                 <p className="heading3">{`${detailsList[2]} (${detailsList[3]})`}</p>
-                                <p className="sub-text">{detailsList[4]}</p>
+                                <p className="image-text">{detailsList[4]}</p>
                                 <p className="image-text">{detailsList[5]}</p>
                                 <AnimateHeight duration={2000} height={showDetails1 ? 'auto' : 0}>
                                 {
