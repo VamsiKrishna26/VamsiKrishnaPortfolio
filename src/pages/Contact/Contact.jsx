@@ -22,7 +22,8 @@ const Contact = (props) => {
             <p className="heading2">Get in Touch!</p>
             <p className="para-text">Since I am currently pursuing a Master's degree in the United Kingdom and will graduate in September 2022,
                 I am searching for Graduate or Work opportunities in Software or Web Development in UK. <br /><br />If you want to get in touch with me, please contact through my email or LinkedIn.
-                <br /><br />Thank you for taking the time to check out my portfolio. Cheers!</p>
+                <br /><br />Thank you for taking the time to check out my portfolio. Cheers!
+                <br/><br/><span className="small-text">This website is made using React.js with CSS for styling and animations.</span></p>
             <div className='logos' ref={ref}>
                 <OverlayTrigger placement="bottom" delay={{ show: 250, hide: 400 }} overlay={<Tooltip>LinkedIn</Tooltip>}>
                     <a href="https://www.linkedin.com/in/vamsi-krishna-palaparti" target="_blank" rel="noreferrer"><img className="logo" src={LinkedIn} alt="No Alt" /></a>
