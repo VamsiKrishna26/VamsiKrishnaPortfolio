@@ -80,6 +80,9 @@ const Projects = () => {
                     </div>
                 </div>
             </Fade>
+            <Fade bottom>
+                <p className="sub-text">For more projects, please visit GitHub!!</p>
+            </Fade>
         </div>
     )
 }

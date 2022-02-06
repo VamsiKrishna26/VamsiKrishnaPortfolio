@@ -79,7 +79,9 @@ const Main = (props) => {
                         </div>
                     </div>
                     <div className="animoji-right">
-                        <img src={Animoji} alt="No alt" className="animoji" />
+                        <div className="image-right">
+                            <img src={Animoji} alt="No alt" className="animoji" />
+                        </div>
                     </div>
 
                 </div>

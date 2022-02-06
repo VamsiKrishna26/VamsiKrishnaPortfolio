@@ -57,11 +57,16 @@
       display: flex;
       align-items: center;
 
-      .animoji {
-        height: auto;
-        width: 270px;
-        border-radius: 50%;
-        margin: 4em;
+      .image-right{
+        
+
+        .animoji {
+          flex: 1;
+          height: auto;
+          width: 270px;
+          //border-radius: 50%;
+          margin: 4em;
+        }
       }
       //border: 1px solid red;
     }
@@ -92,9 +97,11 @@
       .animoji-right{
         justify-content: center;
 
-        .animoji{
-          width: 150px;
-          margin: 0.5em;
+        .image-right{
+          .animoji{
+            width: 150px;
+            margin: 0.5em;
+          }
         }
       }
     }
