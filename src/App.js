@@ -53,6 +53,7 @@ const App = (props) => {
     if (ref && ref.current /* + other conditions */) {
       ref.current.scrollIntoView({ behavior: 'smooth' })
     }
+    setScrollToValue('');
   }
 
   useEffect(() => {
