@@ -2,15 +2,17 @@ import React, { useEffect, useRef, useState } from "react";
 import './Main.scss';
 import 'animate.css';
 import TypeWriterEffect from 'react-typewriter-effect';
-import LinkedIn from "../../assets/linkedin.svg";
-import GitHub from "../../assets/github.svg";
-import Email from "../../assets/email.svg";
-import Resume from "../../assets/resume.svg";
+import {ReactComponent as LinkedIn} from '../../assets/linkedin.svg';
+import {ReactComponent as GitHub} from '../../assets/github.svg';
+import {ReactComponent as Email} from "../../assets/email.svg";
+import {ReactComponent as Resume} from "../../assets/resume.svg";
 import useOnScreen from "../../useOnScreen";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 import Animoji from "../../assets/Animoji.png";
 import CV from "../../assets/VamsiKrishnaPalaparti_CV.pdf";
+
 const Main = (props) => {
+    const {color}=props;
 
     const [innerWidth, setInnerWidth] = useState(window.innerWidth);
 
@@ -64,16 +66,16 @@ const Main = (props) => {
 
                         <div className='logos' ref={ref}>
                             <OverlayTrigger placement="bottom" delay={{ show: 250, hide: 400 }} overlay={<Tooltip>LinkedIn</Tooltip>}>
-                                <a href="https://www.linkedin.com/in/vamsi-krishna-palaparti" target="_blank" rel="noreferrer"><img className="logo" src={LinkedIn} alt="No Alt" /></a>
+                                <a href="https://www.linkedin.com/in/vamsi-krishna-palaparti" target="_blank" rel="noreferrer"><LinkedIn fill={color} className="logo email"/></a>
                             </OverlayTrigger>
                             <OverlayTrigger placement="bottom" delay={{ show: 250, hide: 400 }} overlay={<Tooltip>GitHub</Tooltip>}>
-                                <a href="https://github.com/VamsiKrishna26" target="_blank" rel="noreferrer"><img className='logo' src={GitHub} alt="No alt" /></a>
+                                <a href="https://github.com/VamsiKrishna26" target="_blank" rel="noreferrer"><GitHub fill={color} className="logo email"/></a>
                             </OverlayTrigger>
                             <OverlayTrigger placement="bottom" delay={{ show: 250, hide: 400 }} overlay={<Tooltip>Email Me</Tooltip>}>
-                                <a href="mailto:vamsi26081997@gmail.com" target="_blank" rel="noreferrer"><img className="logo email" src={Email} alt="No Alt" /></a>
+                                <a href="mailto:vamsi26081997@gmail.com" target="_blank" rel="noreferrer"><Email fill={color} className="logo email"/></a>
                             </OverlayTrigger>
                             <OverlayTrigger placement="bottom" delay={{ show: 250, hide: 400 }} overlay={<Tooltip>Download my Resume</Tooltip>}>
-                                <a href={CV} download="Vamsi Krishna CV.pdf" target="_blank" rel="noreferrer"><img className="logo email" src={Resume} alt="No Alt" /></a>
+                                <a href={CV} download="Vamsi Krishna CV.pdf" target="_blank" rel="noreferrer"><Resume fill={color} className="logo email"/></a>
                             </OverlayTrigger>
 
                         </div>

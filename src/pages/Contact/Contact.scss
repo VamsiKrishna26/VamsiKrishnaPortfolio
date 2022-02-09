@@ -10,11 +10,11 @@
     padding: 5em 2em 2em 2em;
 
     .heading2 {
-        color: white;
+        color: white !important;
     }
 
     .para-text {
-        color: white;
+        color: white !important;
         text-align: center;
     }
 
@@ -44,5 +44,12 @@
                 transform: rotate(360deg);
             }
         }
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .logo {
+        width: 30px !important;
+        height: 30px !important;
     }
 }

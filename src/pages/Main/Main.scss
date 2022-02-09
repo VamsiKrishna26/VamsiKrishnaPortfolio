@@ -55,14 +55,17 @@
       align-items: center;
 
       .image-right{
+        background-color: $Maroon;
+        border-radius: 50%;
+        margin: 3em;
         
 
         .animoji {
           flex: 1;
           height: auto;
           width: 270px;
-          //border-radius: 50%;
-          margin: 4em;
+          border-radius: 50%;
+          
         }
       }
       //border: 1px solid red;
@@ -96,8 +99,7 @@
 
         .image-right{
           .animoji{
-            width: 150px;
-            margin: 1em;
+            width: 180px;
           }
         }
       }

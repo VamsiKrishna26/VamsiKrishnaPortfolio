@@ -15,20 +15,20 @@
 
 
     .heading2 {
-        font-size: 30px;
+        font-size: 30px !important;
     }
 
     .heading3 {
-        font-size: 30px;
-        color: red;
+        font-size: 30px !important;
+        color: $Maroon;
     }
 
     .sub-text {
-        font-size: 18px;
+        font-size: 18px !important;
     }
 
     .para-text {
-        font-size: 16px;
+        font-size: 16px !important;
 
         .hand-logo{
             color: $Maroon;

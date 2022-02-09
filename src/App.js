@@ -3,10 +3,10 @@ import './App.scss';
 import About from './pages/About/About';
 import Education from './pages/Education/Education';
 import Main from './pages/Main/Main';
-import LinkedIn from '../src/assets/linkedin.svg';
-import GitHub from '../src/assets/github.svg';
-import Email from "../src/assets/email.svg";
-import Resume from "../src/assets/resume.svg";
+import {ReactComponent as LinkedIn} from '../src/assets/linkedin.svg';
+import {ReactComponent as GitHub} from '../src/assets/github.svg';
+import {ReactComponent as Email} from "../src/assets/email.svg";
+import {ReactComponent as Resume} from "../src/assets/resume.svg";
 import Contact from "./pages/Contact/Contact"
 import CV from "./assets/VamsiKrishnaPalaparti_CV.pdf";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
@@ -16,6 +16,8 @@ import Header from './pages/Header/Header';
 import Skills from './pages/Skills/Skills';
 
 const App = (props) => {
+
+  const color='#64485C';
 
   const [iconsVisibility, setIconsVisiblity] = useState(false);
   const [iconsVisibility1, setIconsVisiblity1] = useState(false);
@@ -45,7 +47,6 @@ const App = (props) => {
   }
 
   const handleScrollToChange = (value) => {
-    console.log(value);
     setScrollToValue(value);
   }
 
@@ -88,40 +89,40 @@ const App = (props) => {
     <div className="App">
       <div className={!(iconsVisibility || iconsVisibility1) ? `logos-app animate__animated animate__fadeInBottomRight` : `logos-app animate__animated animate__fadeOutBottomRight`}>
         <OverlayTrigger placement="left" delay={{ show: 250, hide: 400 }} overlay={<Tooltip>LinkedIn</Tooltip>}>
-          <a href="https://www.linkedin.com/in/vamsi-krishna-palaparti" target="_blank" rel="noreferrer"><img className="logo-app" src={LinkedIn} alt="No Alt" /></a>
+          <a href="https://www.linkedin.com/in/vamsi-krishna-palaparti" target="_blank" rel="noreferrer"><LinkedIn fill={color} className="logo-app email"/></a>
         </OverlayTrigger>
         <OverlayTrigger placement="left" delay={{ show: 250, hide: 400 }} overlay={<Tooltip>GitHub</Tooltip>}>
-          <a href="https://github.com/VamsiKrishna26" target="_blank" rel="noreferrer"><img className='logo-app' src={GitHub} alt="No alt" /></a>
+          <a href="https://github.com/VamsiKrishna26" target="_blank" rel="noreferrer"><GitHub fill={color} className="logo-app email"/></a>
         </OverlayTrigger>
         <OverlayTrigger placement="left" delay={{ show: 250, hide: 400 }} overlay={<Tooltip>Email Me</Tooltip>}>
-          <a href="mailto:vamsi26081997@gmail.com" target="_blank" rel="noreferrer"><img className="logo-app email" src={Email} alt="No Alt" /></a>
+          <a href="mailto:vamsi26081997@gmail.com" target="_blank" rel="noreferrer"><Email fill={color} className="logo-app email"/></a>
         </OverlayTrigger>
         <OverlayTrigger placement="left" delay={{ show: 250, hide: 400 }} overlay={<Tooltip>Download my Resume</Tooltip>}>
-          <a href={CV} download="Vamsi Krishna CV.pdf" target="_blank" rel="noreferrer"><img className="logo-app email" src={Resume} alt="No Alt" /></a>
+          <a href={CV} download="Vamsi Krishna CV.pdf" target="_blank" rel="noreferrer"><Resume fill={color} className="logo-app email"/></a>
         </OverlayTrigger>
       </div>
       <div className='sections'>
-        <Header {...props} headerVisibility={headerVisibility} onScrollToChange={handleScrollToChange} />
+        <Header {...props} headerVisibility={headerVisibility} onScrollToChange={handleScrollToChange} color={color}/>
         <div ref={main_ref}>
-          <Main {...props} onVisibilityChange={handleVisibilityChange} onVisibilityChangeMain={handleVisibilityChangeMain} />
+          <Main {...props} onVisibilityChange={handleVisibilityChange} onVisibilityChangeMain={handleVisibilityChangeMain} color={color}/>
         </div>
         <div ref={experience_ref}>
-          <Experience />
+          <Experience {...props} color={color}/>
         </div>
         <div ref={project_ref}>
-          <Projects />
+          <Projects {...props} color={color}/>
         </div>
         <div ref={skills_ref}>
-          <Skills />
+          <Skills {...props} color={color}/>
         </div>
         <div ref={about_ref}>
-          <About />
+          <About {...props} color={color}/>
         </div>
         <div ref={education_ref}>
-          <Education />
+          <Education {...props} color={color}/>
         </div>
         <div ref={contact_ref}>
-          <Contact {...props} onVisibilityChange1={handleVisibilityChange1} />
+          <Contact {...props} color={color} onVisibilityChange1={handleVisibilityChange1} />
         </div>
       </div>
     </div>
