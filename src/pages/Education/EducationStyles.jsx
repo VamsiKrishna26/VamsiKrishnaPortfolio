@@ -1,4 +1,6 @@
-@import "../../App.scss";
+import styled from "styled-components";
+
+export const EducationDiv=styled.div`
 .education{
     margin-top: -1px !important;
     
@@ -13,7 +15,7 @@
         
     
         .heading1{
-            color: $Maroon;
+            color: ${props=>props.color};
         }
     
         .timeline {
@@ -52,7 +54,7 @@
                         position: absolute;
                         z-index: 10;
                         color: white;
-                        background-color: $Maroon;
+                        background-color: ${props=>props.color};
                         border-radius: 30px;
                     }
     
@@ -94,7 +96,7 @@
     
                 li:hover {
                     .li-icon {
-                        color: $Maroon;
+                        color: ${props=>props.color};
                         background-color: white;
                     }
                 }
@@ -106,7 +108,7 @@
             position: absolute;
             height: 100%;
             width: 10px;
-            background-color: $Maroon;
+            background-color: ${props=>props.color};
             left: 51.5%;
             transform: translateX(-51.5%);
         }
@@ -127,7 +129,7 @@
                     position: absolute;
                     z-index: 10;
                     color: white;
-                    background-color: $Maroon;
+                    background-color: ${props=>props.color};
                     border-radius: 30px;
                     left: -45px;
                 }
@@ -139,17 +141,18 @@
             position: absolute;
             height: 100%;
             width: 5px;
-            background-color: $Maroon;
+            background-color: ${props=>props.color};
             left: 0%;
             transform: translateX(0%);
         }
     
         li:hover {
             .li-icon {
-                color: $Maroon;
+                color: ${props=>props.color};
                 background-color: white;
             }
         }
     }
     
 }
+`;

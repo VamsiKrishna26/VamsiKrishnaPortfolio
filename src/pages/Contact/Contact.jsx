@@ -1,24 +1,28 @@
 import React, { useRef, useEffect } from "react";
 import useOnScreen from "../../useOnScreen";
-import "./Contact.scss";
+//import "./Contact.scss";
 import LinkedIn from "../../assets/linkedin.svg";
 import GitHub from "../../assets/github.svg";
 import Email from "../../assets/email.svg";
 import Resume from "../../assets/resume.svg";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 import CV from "../../assets/VamsiKrishnaPalaparti_CV.pdf";
+import { ContactDiv } from "./ContactStyles";
+
 
 const Contact = (props) => {
 
     const ref = useRef();
     const isVisible = useOnScreen(ref);
 
+    const {color}=props;
+
     useEffect(() => {
         props.onVisibilityChange1(isVisible);
     }, [isVisible, props])
 
     return (
-        <div className="contact-page">
+        <ContactDiv color={color}>
             <p className="heading2">Get in Touch!</p>
             <p className="para-text">Since I am currently pursuing a Master's degree in the United Kingdom and will graduate in September 2022,
                 I am searching for Graduate or Work opportunities in Software or Web Development in UK. <br /><br />If you want to get in touch with me, please contact through my email or LinkedIn.
@@ -38,7 +42,7 @@ const Contact = (props) => {
                     <a href={CV} download="Vamsi Krishna CV.pdf" target="_blank" rel="noreferrer"><img className="logo email" src={Resume} alt="No Alt" /></a>
                 </OverlayTrigger>
             </div>
-        </div>
+        </ContactDiv>
     )
 }
 

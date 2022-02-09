@@ -1,7 +1,7 @@
-@import "../../App.scss";
+import styled from 'styled-components';
 
-.about-page {
-    background-color: $Maroon;
+export const AboutDiv=styled.div`
+    background-color: ${props=>props.color};
     padding: 3em;
     margin-top: -2px !important;
 
@@ -14,7 +14,7 @@
         margin-right: 2em;
 
         .heading1{
-            color: white;
+            color: white !important;
         }
 
         .text-photo {
@@ -48,10 +48,9 @@
             }
         }
     }
-}
+    }
 
-@media screen and (max-width: 920px) {
-    .about-page {
+    @media screen and (max-width: 920px) {
         padding: 0em !important;
         
         .about-page-body {
@@ -60,15 +59,16 @@
         }
 
         .text-photo {
-            flex-direction: column;
+            flex-direction: column !important;
+            
             .about-me {
                 margin-right: 0em !important;
             }
+
             .div-graduation-image {
                 .graduation-image {
                     max-width: 80% !important;
                 }
             }
         }
-    }
-}
+`;

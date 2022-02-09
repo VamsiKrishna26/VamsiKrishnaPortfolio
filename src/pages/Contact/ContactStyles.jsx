@@ -1,12 +1,12 @@
-@import "../../App.scss";
+import styled from 'styled-components';
 
-.contact-page {
+export const ContactDiv = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: -1px !important;
-    background-color: $Maroon;
+    background-color: ${props=>props.color};
     padding: 5em 2em 2em 2em;
 
     .heading2 {
@@ -45,11 +45,11 @@
             }
         }
     }
-}
 
-@media screen and (max-width: 920px) {
-    .logo {
-        width: 30px !important;
-        height: 30px !important;
+    @media screen and (max-width: 920px) {
+        .logo {
+            width: 30px !important;
+            height: 30px !important;
+        }
     }
-}
+    `;

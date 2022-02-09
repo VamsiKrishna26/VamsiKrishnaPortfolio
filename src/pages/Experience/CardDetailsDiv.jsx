@@ -1,5 +1,7 @@
-@import "../../App.scss";
+import styled from "styled-components";
+import Infosys from "../../assets/Infosys.jpg";
 
+export const CardDetailsDiv=styled.div`
 .card-details-exp {
     //border: 1px solid red;
     margin: auto;
@@ -20,7 +22,7 @@
 
     .heading3 {
         font-size: 30px !important;
-        color: $Maroon;
+        color: ${props=>props.color};
     }
 
     .sub-text {
@@ -31,7 +33,7 @@
         font-size: 16px !important;
 
         .hand-logo{
-            color: $Maroon;
+            color: ${props=>props.color};
             height: 16px;
             width: 16px;
         }
@@ -55,7 +57,7 @@
             //border-radius: 16px;
             width: 360px;
             height: 360px;
-            background: url("../../assets/Infosys.jpg");
+            background: url();
             position: relative;
             background-repeat: no-repeat;
             background-size: cover;
@@ -81,7 +83,7 @@
                 span {
                     width: 25%;
                     height: 100%;
-                    background: url("../../assets/Infosys.jpg");
+                    background: url(${Infosys});
                     background-repeat: no-repeat;
                     background-size: cover;
                     transition: 0.5s;
@@ -313,3 +315,5 @@
         }
     }
 }
+
+`;

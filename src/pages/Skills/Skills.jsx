@@ -1,13 +1,15 @@
 import React from "react";
 import { Fade } from "react-reveal";
-import "./Skills.scss";
+// import "./Skills.scss";
 import { TiTick } from "react-icons/ti";
 import { VscFileCode } from "react-icons/vsc";
 import { FaLaptopCode, FaDatabase } from "react-icons/fa";
 import { BsCloud } from "react-icons/bs";
+import { SkillsDiv } from "./SkillsDiv";
 
 const Skills = (props) => {
 
+    const {color}=props;
     const core = ["Python", "Java", "HTML", "CSS", "JavaScript"];
     const front_back = ["React.js", "React Native", "Angular", "Node.js and Express.js", "Spring and Spring Boot"]
     const db = ["DBMS and NoSQL", "SQL and MySQL", "MongoDB"]
@@ -15,7 +17,7 @@ const Skills = (props) => {
     // const soft = ["Fluent in English and capable of communicating effectively", "Excellent team player who frequently assumed leadership roles in project management.", "Openness to new experiences and adaptability to changing circumstances."]
 
     return (
-        <div className="skills-page">
+        <SkillsDiv color={color}>
             <Fade bottom>
                 <p className="heading2">
                     Since the beginning of my career as a Software Developer, both as a student and as an IT professional, I've developed several soft skills such as Effective Communication Skills, Adaptability, and Teamwork.
@@ -71,7 +73,7 @@ const Skills = (props) => {
                 </div>
             </Fade>
 
-        </div>
+        </SkillsDiv>
     )
 }
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import './Main.scss';
+// import './Main.scss';
 import 'animate.css';
 import TypeWriterEffect from 'react-typewriter-effect';
 import {ReactComponent as LinkedIn} from '../../assets/linkedin.svg';
@@ -10,6 +10,7 @@ import useOnScreen from "../../useOnScreen";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 import Animoji from "../../assets/Animoji.png";
 import CV from "../../assets/VamsiKrishnaPalaparti_CV.pdf";
+import { MainDiv } from "./MainStyles";
 
 const Main = (props) => {
     const {color}=props;
@@ -52,7 +53,7 @@ const Main = (props) => {
     const name_style1_mobile = { fontSize: '25px' }
 
     return (
-        <div>
+        <MainDiv color={color}>
             <div className="main-page" ref={ref1}>
                 <div className="text">
                     <div className="text-left" style={{ width: 'fit-content' }}>
@@ -89,7 +90,7 @@ const Main = (props) => {
                 </div>
 
             </div>
-        </div>
+        </MainDiv>
     )
 
 }

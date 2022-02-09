@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Fade } from 'react-reveal';
-import './About.scss';
+// import './About.scss';
 import graduationPicture from '../../assets/graduation-photo.png';
+import { AboutDiv } from "./AboutStyles";
 
-const About = () => {
+const About = (props) => {
+
+    const {color}=props;
     const [innerWidth, setInnerWidth] = useState(window.innerWidth);
 
     useEffect(() => {
@@ -17,7 +20,7 @@ const About = () => {
     }, [])
 
     return (
-        <div className='about-page'>
+        <AboutDiv color={color}>
             <div className='about-page-body'>
                 <Fade bottom>
                     <p className='heading1'>About Me</p>
@@ -56,7 +59,7 @@ const About = () => {
 
                 </div>
             </div>
-        </div>
+        </AboutDiv>
     )
 }
 

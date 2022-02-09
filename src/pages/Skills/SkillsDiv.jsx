@@ -1,6 +1,6 @@
-@import "../../App.scss";
+import styled from "styled-components";
 
-.skills-page{
+export const SkillsDiv=styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,8 +9,8 @@
     flex-wrap: wrap;
 
     .heading2{
-        color: white;
-        background-color: $Maroon;
+        color: white !important;
+        background-color: ${props=>props.color};
         text-align: center;
         font-size: 26px;
         padding: 3em 1em 1em 1em;
@@ -29,14 +29,14 @@
         
 
         .heading3{
-            color: $Maroon;
+            color: ${props=>props.color};
         }
 
         .skill-icon-fade{
             align-self: center;
 
             .skill-icon{
-                color: $Maroon;
+                color: ${props=>props.color};
                 height: 50px;
                 width: 50px;
                 //border: 1px solid red;
@@ -45,14 +45,14 @@
         }
 
         .tick{
-            color: $Maroon;
+            color: ${props=>props.color};
             height: 16px;
             width: 16px;
         }
     }
-}
+    }
 
-@media screen and (max-width: 920px) {
+    @media screen and (max-width: 920px) {
     .heading2{
         font-size: 20px !important;
     }
@@ -70,4 +70,4 @@
             font-size: 15px !important;
         }
     }
-}
+`;

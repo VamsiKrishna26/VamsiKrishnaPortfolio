@@ -1,5 +1,6 @@
-@import "../../App.scss";
+import styled from "styled-components";
 
+export const ProjectsDiv = styled.div`
 .projects{
     margin-top: -1px !important;
     
@@ -13,7 +14,7 @@
         padding-left: 3%;
         padding-right: 3%;
         .sub-text{
-            color: $Maroon;
+            color: ${props=>props.color};
             text-align: center;
         }
     
@@ -30,7 +31,7 @@
             margin: 2em;
             width: 85%;
             //border: 1px solid red;
-            background-color: $Maroon;
+            background-color: ${props=>props.color};
             border-radius: 10px;
     
             .project {
@@ -90,7 +91,7 @@
                     font-size: 18px !important;
     
                     .code-logo{
-                        color: $Maroon;
+                        color: ${props=>props.color};
                         width: 18px;
                         height: 18px;
                     }
@@ -100,8 +101,8 @@
                     align-self: center;
                     text-decoration: none;
                     .button{
-                        color: $Maroon;
-                        border-color: $Maroon;
+                        color: ${props=>props.color};
+                        border-color: ${props=>props.color};
                     }
                 }
             }
@@ -130,3 +131,4 @@
     }
     
 }
+`;

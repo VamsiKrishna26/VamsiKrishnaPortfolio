@@ -1,4 +1,6 @@
-@import "../../App.scss";
+import styled from "styled-components";
+
+export const ExperienceDiv=styled.div`
 .experience-page{
     width: 100%;
     display: flex;
@@ -6,7 +8,7 @@
     align-items: center;
     justify-content: center;
     padding: 15px;
-    background-color: $Maroon;
+    background-color: ${props=>props.color};
     padding: 5em 2em 2em 2em;
     margin-top: -1px !important;
 
@@ -35,3 +37,4 @@
         }
     }
 }
+`;

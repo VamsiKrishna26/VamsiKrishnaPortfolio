@@ -1,7 +1,8 @@
-@import "../../App.scss";
+import styled from "styled-components";
 
+export const HeaderDiv=styled.div`
 .header {
-    background-color: $Maroon;
+    background-color: ${props=>props.color};
     opacity: 0.9 !important;
     height: 70px;
     position: fixed;
@@ -62,7 +63,7 @@
             }
 
             .menu {
-                background-color: $Maroon;
+                background-color: ${props=>props.color};
                 display: flex;
                 align-items: center;
                 flex-direction: column;
@@ -89,3 +90,5 @@
         }
     }
 }
+
+`;

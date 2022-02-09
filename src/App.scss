@@ -1,39 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Comforter&family=Dongle:wght@300&family=Inconsolata:wght@300&family=Josefin+Sans:ital,wght@1,300&family=Nunito+Sans:wght@300&family=Nunito:wght@300&family=Raleway:wght@200&family=Roboto:wght@300&family=Source+Sans+Pro:wght@300&display=swap");
 //#800020
 
-$Maroon: #64485C;
-
 .App{
     
 
     .heading1 {
         font-family: "Raleway", sans-serif;
         font-size: 60px;
-        color: $Maroon;
     }
     
     .heading2 {
         font-family: "Source Sans Pro", sans-serif;
         font-size: 45px;
-        color: $Maroon;
     }
     
     .heading3 {
         font-family: "Dongle", sans-serif;
         font-size: 40px;
-        color: $Maroon;
     }
     
     .sub-text {
         font-family: "Nunito Sans", sans-serif;
         font-size: 24px;
-        color: $Maroon;
     }
     
     .image-text {
         font-family: "Inconsolata", monospace;
         font-size: 24px;
-        color: $Maroon;
     }
     
     .para-text {
@@ -79,6 +72,21 @@ $Maroon: #64485C;
             to {
                 transform: rotate(360deg) scale(1.5);
             }
+        }
+    }
+
+    .easter-egg{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 1em;
+
+        .colors{
+            font-family: 'Arvo', serif;
+            word-spacing: 0.5em;
+            cursor: pointer;
+            text-align: center;
         }
     }
 }
