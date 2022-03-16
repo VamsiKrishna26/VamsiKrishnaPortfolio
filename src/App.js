@@ -45,7 +45,7 @@ const AppDiv=styled.div`
 
 const App = (props) => {
 
-  const [color,setColor]=useState("#800020");
+  const [color,setColor]=useState("#002147");
 
   const colors = {
     "Passionate": "#800020", "Optimistic": "#Ff4500", "Warmth": "#808000", "Natural": "#355e3b",

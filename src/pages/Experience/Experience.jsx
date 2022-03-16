@@ -86,7 +86,7 @@ const Experience = (props) => {
 
                 </Fade>
                 <Fade bottom>
-                    <p className='sub-text'>I am currently employed (October 2020 - Present) as a Customer Assistant (Part-Time) in the Men's Fashion Department at Marks and Spencer (M&S) .</p>
+                    <p className='sub-text'>I am currently employed (October 2020 - Present) as a Customer Assistant (Part-Time) in the Men's Fashion Department at Marks and Spencer (M&S), Leicester, UK.</p>
                 </Fade>
                 {/* <CardDetails animationEffect={`${cardIndex===true?`animate__animated animate__zoomIn`: `animate__animated animate__zoomOut`}`} oppositeDirection={true} detailsList={list2}/> */}
             </div>

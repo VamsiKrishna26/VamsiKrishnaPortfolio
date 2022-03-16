@@ -181,7 +181,7 @@ const Education = (props) => {
         return () => window.removeEventListener("resize", updateWidthDimensions)
     }, [])
 
-    const list1 = ["University of Leicester", "MSc in Advanced Computer Science.", "Expecting First Class Degree", "Studying modules like Advanced Web Technologies, Mobile and Web Applications, Big Data, and Predictive Analysis."]
+    const list1 = ["University of Leicester", "MSc in Advanced Computer Science.", "Grade: 83% in Semester 1. Expecting to maintain the same overall throughout the year.", "Studying modules like Advanced Web Technologies, Mobile and Web Applications, Big Data, and Predictive Analysis."]
     const list2 = ["Anurag Group of Institutions", "B.Tech in Computer Science and Engineering.", "Scored an overall CGPA of 8.67 out of 10 without any backlogs.", "Completed courses like C, C++ with OOP concepts, Java, Python, Web Technologies, Big Data, Cloud Computing, Machine Learning, DBMS."]
     const list3 = ["Sri Chaitanya Junior College", "An intermediate course in MPC.", "Scored 85%.", "MPC – Mathematics, Physics, and Chemistry."]
     const list4 = ["Sri Chaitanya Techno School", "High School education.", "Scored 9.5 CGPA out of 10.", "Subjects include Maths, Physics, Chemistry, Biology and Social studies"]
