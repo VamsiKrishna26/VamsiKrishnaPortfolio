@@ -8,7 +8,7 @@ import TravelFeet from "../../assets/TravelFeet.png";
 import TravelFeet_mobile from "../../assets/TravelFeet_mobile.png";
 import { ReactComponent as ProjectsTop } from '../../assets/ProjectsTop.svg';
 import { ReactComponent as ProjectsBottom } from '../../assets/ProjectsBottom.svg';
-import { Fade } from "react-reveal";
+import { Fade } from "react-awesome-reveal";
 import { Button } from "@mui/material";
 import { BsCode } from "react-icons/bs";
 // import { ProjectsDiv } from "./ProjectsStyles";
@@ -25,7 +25,7 @@ const ProjectsDiv = styled.div`
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        
+        /* border:1px solid red; */
         padding-left: 3%;
         padding-right: 3%;
         .sub-text{
@@ -34,7 +34,7 @@ const ProjectsDiv = styled.div`
         }
     
         .container {
-            position: relative;
+            /* border:1px solid red; */
             overflow: hidden;
             -webkit-perspective: 50em;
             perspective: 50em;
@@ -44,7 +44,6 @@ const ProjectsDiv = styled.div`
             transition: all 0.2s ease-out;
             cursor: pointer;
             margin: 2em;
-            width: 85%;
             //border: 1px solid red;
             background-color: ${props=>props.color};
             border-radius: 10px;
@@ -140,7 +139,7 @@ const ProjectsDiv = styled.div`
     
             .container{
                 margin: 1em !important;
-                width: 100% !important;
+                width: 90%;
             }
         }
     }
@@ -175,10 +174,10 @@ const Projects = (props) => {
             <div className="projects">
                 <ProjectsTop fill={color} />
                 <div className="projects-page">
-                    <Fade bottom>
+                    <Fade direction="up" duration="500">
                         <p className="sub-text">I have done many projects on Web and Mobile Development as part of my hobby and University Assingments on various technologies like React.js, Angular and React Native (Expo).</p>
                     </Fade>
-                    <Fade bottom>
+                    <Fade direction="up" duration="500">
                         <div className="container">
                             {
                                 innerWidth > 768 ? <img src={MrMovies} alt="No Alt" className="project" /> : <img src={MrMovies_mobile} alt="No Alt" className="project" />
@@ -192,7 +191,7 @@ const Projects = (props) => {
                             </div>
                         </div>
                     </Fade>
-                    <Fade bottom>
+                    <Fade direction="up" duration="500">
                         <div className="container">
                             {
                                 innerWidth > 768 ? <img src={DocScan} alt="No Alt" className="project" /> : <img src={DocScan_mobile} alt="No Alt" className="project" />
@@ -207,7 +206,7 @@ const Projects = (props) => {
                             </div>
                         </div>
                     </Fade>
-                    <Fade bottom>
+                    <Fade direction="up" duration="500">
                         <div className="container">
                             {
                                 innerWidth > 768 ? <img src={TravelFeet} alt="No Alt" className="project" /> : <img src={TravelFeet_mobile} alt="No Alt" className="project" />
@@ -222,7 +221,7 @@ const Projects = (props) => {
                             </div>
                         </div>
                     </Fade>
-                    <Fade bottom>
+                    <Fade direction="up" duration="500">
                         <p className="sub-text">For more projects, please visit GitHub!!</p>
                     </Fade>
                 </div>

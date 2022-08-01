@@ -1,6 +1,6 @@
 import React from "react";
 // import './Experience.scss';
-import { Fade } from 'react-reveal';
+import { Fade } from 'react-awesome-reveal';
 // import MandS from "../../assets/M&S.jpg";
 import Infosys from "../../assets/Infosys.jpg";
 import CardDetails from "./CardDetails";
@@ -74,18 +74,18 @@ const Experience = (props) => {
     return (
         <ExperienceDiv color={color}>
             <div className="experience-page">
-                <Fade bottom>
+                <Fade direction="up" duration="500">
                     <p className='sub-text'>I have nearly 2 years of professional experience working for the second largest IT company in India.</p>
                 </Fade>
                 {/* <AiFillCaretLeft onClick={()=>{if(cardIndex===-1){setCardIndex(false);}else{setCardIndex(!cardIndex)}}}/>
             <AiFillCaretRight onClick={()=>{if(cardIndex===-1){setCardIndex(false);}else{setCardIndex(!cardIndex)}}}/> */}
-                <Fade bottom>
+                <Fade direction="up" duration="500">
                     <div className="card-details">
                         <CardDetails detailsList={list1} />
                     </div>
 
                 </Fade>
-                <Fade bottom>
+                <Fade direction="up" duration="500">
                     <p className='sub-text'>I am currently employed (October 2020 - Present) as a Customer Assistant (Part-Time) in the Men's Fashion Department at Marks and Spencer (M&S), Leicester, UK.</p>
                 </Fade>
                 {/* <CardDetails animationEffect={`${cardIndex===true?`animate__animated animate__zoomIn`: `animate__animated animate__zoomOut`}`} oppositeDirection={true} detailsList={list2}/> */}

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Fade } from 'react-reveal';
+import { Fade } from 'react-awesome-reveal';
 // import './About.scss';
 import graduationPicture from '../../assets/graduation-photo.png';
 // import { AboutDiv } from "./AboutStyles";
@@ -27,10 +27,11 @@ const AboutDiv=styled.div`
             display: flex;
             align-items:center;
             justify-content: space-between;
+            /* border: 1px solid red; */
 
             .about-me {
-                //flex: 3;
-                //border: 1px solid red;
+                flex: 3; 
+                /* border: 1px solid red; */
                 text-align: justify;
                 text-justify: inter-word;
                 margin-right: 1em;
@@ -38,23 +39,23 @@ const AboutDiv=styled.div`
             }
 
             .div-graduation-image {
-                //flex: 1;
+                flex: 1;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
                 min-width: 20%;
+                /* border: 1px solid red; */
 
                 .graduation-image {
                     border-radius: 8px;
-                    max-width: 100%;
-                    margin-bottom: 2em;
+                    max-width: 270px;
                     //border: 1px solid blue;
                 }
             }
         }
     }
-    }
+    
 
     @media screen and (max-width: 920px) {
         padding: 0em !important;
@@ -77,6 +78,7 @@ const AboutDiv=styled.div`
                 }
             }
         }
+    }
 `;
 
 const About = (props) => {
@@ -97,12 +99,12 @@ const About = (props) => {
     return (
         <AboutDiv color={color}>
             <div className='about-page-body'>
-                <Fade bottom>
+                <Fade direction="up" duration="500">
                     <p className='heading1'>About Me</p>
                 </Fade>
                 
                 <div className="text-photo">
-                    <Fade bottom>
+                    <Fade direction="up" duration="500">
                         <p className='para-text about-me'>
                             I am a Software Developer and currently a student at University of Leicester pursuing MSc in Advanced Computer Science.
                             I was born in Hyderabad, India and I have done all my schooling and college there.
@@ -120,7 +122,7 @@ const About = (props) => {
                             }
                         </p>
                     </Fade>
-                    <Fade bottom>
+                    <Fade direction="up" duration="500">
                         <div  className="div-graduation-image">
                             <img src={graduationPicture} className="graduation-image" alt="No Alt" />
                             {

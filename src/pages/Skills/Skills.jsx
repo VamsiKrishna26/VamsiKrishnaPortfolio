@@ -1,5 +1,5 @@
 import React from "react";
-import { Fade } from "react-reveal";
+import { Fade } from "react-awesome-reveal";
 // import "./Skills.scss";
 import { TiTick } from "react-icons/ti";
 import { VscFileCode } from "react-icons/vsc";
@@ -58,7 +58,6 @@ const SkillsDiv=styled.div`
             width: 16px;
         }
     }
-    }
 
     @media screen and (max-width: 920px) {
     .heading2{
@@ -78,6 +77,7 @@ const SkillsDiv=styled.div`
             font-size: 15px !important;
         }
     }
+}
 `;
 
 const Skills = (props) => {
@@ -91,16 +91,16 @@ const Skills = (props) => {
 
     return (
         <SkillsDiv color={color}>
-            <Fade bottom>
+            <Fade direction="up" duration="500">
                 <p className="heading2">
                     Since the beginning of my career as a Software Developer, both as a student and as an IT professional, I've developed several soft skills such as Effective Communication Skills, Adaptability, and Teamwork.
                     <br/>In addition, owing to all of the peer developers in my life and the internet, I've had acquired a variety of technical abilities.
                 </p>
             </Fade>
-            <Fade bottom>
+            <Fade direction="up" duration="500">
                 <div className="skill-type">
-                    <Fade bottom><p className="heading3">Core Languages:</p></Fade>
-                    <div className="skill-icon-fade"><Fade bottom><VscFileCode className="skill-icon" /></Fade></div>
+                    <Fade direction="up" duration="500"><p className="heading3">Core Languages:</p></Fade>
+                    <div className="skill-icon-fade"><Fade direction="up" duration="500"><FaLaptopCode className="skill-icon" /></Fade></div>
                     {
                         core.map((skill, index) =>
                             <Fade key={index} bottom>
@@ -109,10 +109,10 @@ const Skills = (props) => {
                     }
                 </div>
             </Fade>
-            <Fade bottom>
+            <Fade direction="up" duration="500">
                 <div className="skill-type">
-                    <Fade bottom> <p className="heading3">Web and Mobile:</p></Fade>
-                    <div className="skill-icon-fade"><Fade bottom><FaLaptopCode className="skill-icon" /></Fade></div>
+                    <Fade direction="up" duration="500"><p className="heading3">Web and Mobile:</p></Fade>
+                    <div className="skill-icon-fade"><Fade direction="up" duration="500"><VscFileCode className="skill-icon" /></Fade></div>
                     {
                         front_back.map((skill, index) =>
                             <Fade key={index} bottom>
@@ -121,10 +121,10 @@ const Skills = (props) => {
                     }
                 </div>
             </Fade>
-            <Fade bottom>
+            <Fade direction="up" duration="500">
                 <div className="skill-type">
-                    <Fade bottom><p className="heading3">Databases:</p></Fade>
-                    <div className="skill-icon-fade"><Fade bottom><FaDatabase className="skill-icon" /></Fade></div>
+                    <Fade direction="up" duration="500"><p className="heading3">Databases:</p></Fade>
+                    <div className="skill-icon-fade"><Fade direction="up" duration="500"><FaDatabase className="skill-icon" /></Fade></div>
                     {
                         db.map((skill, index) =>
                             <Fade key={index} bottom>
@@ -133,10 +133,10 @@ const Skills = (props) => {
                     }
                 </div>
             </Fade>
-            <Fade bottom>
+            <Fade direction="up" duration="500">
                 <div className="skill-type">
-                    <Fade bottom><p className="heading3">Cloud and DevOps:</p></Fade>
-                    <div className="skill-icon-fade"><Fade bottom><BsCloud className="skill-icon" /></Fade></div>
+                    <Fade direction="up" duration="500"><p className="heading3">Cloud and DevOps:</p></Fade>
+                    <div className="skill-icon-fade"><Fade direction="up" duration="500"><BsCloud className="skill-icon" /></Fade></div>
                     {
                         devops.map((skill, index) =>
                             <Fade key={index} bottom>
