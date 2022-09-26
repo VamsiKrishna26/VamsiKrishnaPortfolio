@@ -65,7 +65,7 @@ const CardDetailsDiv=styled.div`
         .card {
             //border-radius: 16px;
             width: 360px;
-            height: 360px;
+            height: 420px;
             background: url();
             position: relative;
             background-repeat: no-repeat;
@@ -185,8 +185,9 @@ const CardDetailsDiv=styled.div`
     .card-details-flip {
         flex: 3;
         width: 300px;
-        height: 300px;
+        //height: 400px;
         perspective: 1000px;
+        
 
         .card-details-inner {
             position: relative;

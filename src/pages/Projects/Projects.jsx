@@ -6,6 +6,8 @@ import DocScan from "../../assets/DocScan.png";
 import DocScan_mobile from "../../assets/DocScan_mobile.png";
 import TravelFeet from "../../assets/TravelFeet.png";
 import TravelFeet_mobile from "../../assets/TravelFeet_mobile.png";
+import PyCompEdit from "../../assets/PyCompEdit.png";
+import PyCompEdit_mobile from "../../assets/PyCompEdit_mobile.png";
 import { ReactComponent as ProjectsTop } from '../../assets/ProjectsTop.svg';
 import { ReactComponent as ProjectsBottom } from '../../assets/ProjectsBottom.svg';
 import { Fade } from "react-awesome-reveal";
@@ -162,6 +164,8 @@ const Projects = (props) => {
         return () => window.removeEventListener("resize", updateWidthDimensions)
     }, [])
 
+    const pycompedit = ["PyCompEdit", "https://py-comp-edit-front.herokuapp.com/", "The project is a Web Application that allows you to write, edit, and compile code in multiple languages.",
+        "Single Page Web Application", "The front-end framework was React.js, the back-end framework was Express.js and Node.js, the database was MongoDBAtlas, and the application was hosted on Heroku."]
     const mr_movies = ["Mr. Movies", "https://mrmovies.herokuapp.com/", "Mr. Movies is a movie informational website where viewers can know about films, stars, directors, and genres.",
         "Single Page Web Application", "The front-end framework was React.js, the back-end framework was Express.js and Node.js, the databases were MongoDBAtlas and Firebase, and the application was hosted on Heroku."]
     const doc_scan = ["Document Scanner", "https://github.com/VamsiKrishna26/DocumentScanner", "Document Scanner is a smart scanner application that allows you to capture and save any image with text on it, as well as extract the text in the image into a paragraph that can be copied and used anywhere."
@@ -176,6 +180,20 @@ const Projects = (props) => {
                 <div className="projects-page">
                     <Fade direction="up" duration="500">
                         <p className="sub-text">I have done many projects on Web and Mobile Development as part of my hobby and University Assingments on various technologies like React.js, Angular and React Native (Expo).</p>
+                    </Fade>
+                    <Fade direction="up" duration="500">
+                        <div className="container">
+                            {
+                                innerWidth > 768 ? <img src={PyCompEdit} alt="No Alt" className="project" /> : <img src={PyCompEdit_mobile} alt="No Alt" className="project" />
+                            }
+                            <div className="fig-caption">
+                                <p className="sub-text">{pycompedit[0]}</p>
+                                {
+                                    pycompedit.slice(2,).map((point, index) => <p className="para-text" key={index}><BsCode className="code-logo" /> {point}</p>)
+                                }
+                                <a href={pycompedit[1]} className="button-bs" target="_blank" rel="noreferrer"><Button className="button" variant="outlined">Open Project</Button></a>
+                            </div>
+                        </div>
                     </Fade>
                     <Fade direction="up" duration="500">
                         <div className="container">
